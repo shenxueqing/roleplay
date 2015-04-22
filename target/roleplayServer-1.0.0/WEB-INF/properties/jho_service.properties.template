@@ -1,0 +1,23 @@
+userHasInviteLimited = <%=env[:userHasInviteLimited]%>
+webInviteMaxNum =  <%=env[:webInviteMaxNum]%>
+AnroidDownLoadUrl =  <%=env[:AnroidDownLoadUrl]%>
+picDirectory =  <%=env[:picDirectory]%>
+apkAnroidDirectory =  <%=env[:apkAnroidDirectory]%>
+apkIosDirectory =  <%=env[:apkIosDirectory]%>
+default_maxnum =  <%=env[:default_maxnum]%>
+Android_username =   <%=env[:Android_username]%>
+Android_password =   <%=env[:Android_password]%>
+Android_masterSecret =   <%=env[:Android_masterSecret]%>
+Android_appKey =   <%=env[:Android_appKey]%>
+Ios_path =   <%=env[:Ios_path]%>
+Ios_password =   <%=env[:Ios_password]%>
+Ios_count =   <%=env[:Ios_count]%>
+Ios_Production =   <%=env[:Ios_Production]%>
+hot_HabitMaxnum =   <%=env[:hot_HabitMaxnum]%>
+webUrl =  <%=env[:webUrl]%>
+newUserMaxHabitnum =  <%=env[:newUserMaxHabitnum]%>
+maxShareBookNum = <%=env[:maxShareBookNum]%>
+webPicUrl = <%=env[:webPicUrl]%>
+addHabitNeedCheckinNum = <%=env[:addHabitNeedCheckinNum]%>
+hotInteval= <%=env[:hotInteval]%>
+

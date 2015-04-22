@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+<!-- 控制台输出日志 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%p] [%t] %c\(%L\) %m%n</pattern>
+        </layout>
+    </appender>
+    
+<!--日志文件jho.log-->
+     <appender name="JHO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>
+       	 	../logs/justHoldOn/xywc.log
+        </File>
+    <!-- 指定备份方式为按月备份或者日志文件大于10MB -->
+     	 <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> 
+       		<FileNamePattern>
+       			../logs/justHoldOn/xywc.%d{yyyy-MM-dd}.%i.log.bak
+       		</FileNamePattern>
+      		<timeBasedFileNamingAndTriggeringPolicy 
+      		class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP"> 
+     			 <maxFileSize>1MB</maxFileSize> 
+      		</timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+
+       <!-- 指定打印格式 -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%p] [%t] %c\(%L\) %m%n%ex</Pattern>
+        </layout>
+    </appender>
+    
+  
+<!--ROOT logger-->
+  	<root level= "DEBUG">	
+		<appender-ref ref="STDOUT"/>
+		<appender-ref ref="JHO"/>
+</root> 
+
+    	
+	<!-- 第三方jar包logger级别控制 -->
+<logger name="org.springframework" level="ERROR">
+</logger>
+<logger name="org.hibernate" level="ERROR">
+</logger>
+<logger name="org.hibernate.internal.SessionImpl" level="DEBUG">
+</logger>
+<logger name="org.hibernate.internal.SessionFactoryImpl" level="DEBUG">
+</logger>
+<logger name="org.hibernate.engine.transaction.internal.jdbc.JdbcTransaction" level="DEBUG">
+</logger>
+<logger name="org.apache.http" level="DEBUG">
+</logger>
+
+	
+</configuration>
